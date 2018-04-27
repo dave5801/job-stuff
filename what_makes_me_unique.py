@@ -31,7 +31,7 @@ class AnActualPerson(object):
         else:
             return "If looks are what matters to you -- then I feel sorry for you."
         #Think
-    def awesome(self):
+    def canYouBelieveThisGuy(self):
         if self.awesome == True:
             return "Chuck Norris, Unicorns, and Lazer Beam Explosions!!!!"
         else:
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     print(David.amIcool())
     print(David.isThisGuySmart())
     print(David.iThinkWeKnowTheAnswerToThisQuestion())
-    print(David.awesome())
+    print(David.canYouBelieveThisGuy())
