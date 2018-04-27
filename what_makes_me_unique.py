@@ -37,10 +37,21 @@ class AnActualPerson(object):
         else:
             return "Sorry, but I'm just as cool or awesome as most normal people in this world"
 
+#verify that I am myself, and not someone else
+def arePeopleUnique(person, stuff_about_that_person):
+    if person in OTHER_PEOPLE:
+        print("You can't have more than two unique people in this world...because science, computer science!")
+        return True
+    else:
+        OTHER_PEOPLE[person] = stuff_about_that_person
+        print("I am not a biological clone of anyone")
+        return False
+
 
 if __name__ == '__main__':
     '''Initialize myself.'''
     David = AnActualPerson(True, True, True, False)
+    
 
     '''Give myself parameters.'''
     david_params = []
@@ -49,6 +60,12 @@ if __name__ == '__main__':
     david_params.append(David.iThinkWeKnowTheAnswerToThisQuestion())
     david_params.append(David.canYouBelieveThisGuy())
 
-    for param in david_params:
-        print(param)
-    
+    #wow...this is making me doubt my own existence, getting seriously dark
+    amIUnique = arePeopleUnique(David, david_params)
+    print("...Is someone else out these like me?", amIUnique)
+    print("Lets see that again...")
+    print()
+    amIUnique = arePeopleUnique(David, david_params)
+    print("Am I unique?...",amIUnique)
+    print()
+    print("I'm pretty sure the key value pairs, and constant time lookup prove that I'm real")
