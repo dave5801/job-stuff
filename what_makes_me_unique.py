@@ -15,7 +15,7 @@ class AnActualPerson(object):
         #What
     def amIcool(self):
         if self.cool == True:
-            return "Hell Yeah...obviously"
+            return "Hell Yeah I'm cool...obviously"
         else:
             return "Actually I think honesty, hardwork, and desire to learn are what matters, I'm sorry that's not cool"
         #I
@@ -39,8 +39,16 @@ class AnActualPerson(object):
 
 
 if __name__ == '__main__':
-    David = AnActualPerson()
-    print(David.amIcool())
-    print(David.isThisGuySmart())
-    print(David.iThinkWeKnowTheAnswerToThisQuestion())
-    print(David.canYouBelieveThisGuy())
+    '''Initialize myself.'''
+    David = AnActualPerson(True, True, True, False)
+
+    '''Give myself parameters.'''
+    david_params = []
+    david_params.append(David.amIcool())
+    david_params.append(David.isThisGuySmart())
+    david_params.append(David.iThinkWeKnowTheAnswerToThisQuestion())
+    david_params.append(David.canYouBelieveThisGuy())
+
+    for param in david_params:
+        print(param)
+    
