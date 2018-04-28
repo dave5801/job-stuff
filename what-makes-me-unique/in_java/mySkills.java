@@ -1,4 +1,4 @@
-//I'm a badass
+//I'm a badass with some awesome technology skills
 public interface mySkills{
 
     //here's what makes me a badass
