@@ -34,7 +34,7 @@ class David extends Person implements mySkills{
     //lets implement that interface
     public void allTheStuffIKnow(){
         for (NinjaSkills skills : NinjaSkills.values()) {
-            System.out.println(skills);
+            System.out.println(skills + " " + skills.getClass().getName());
         }
     }
 
@@ -81,23 +81,20 @@ public class MeMyself{
 
         //hash sets have no tolerance for duplicates
         if(all_people_in_existence.size() == 1){
-            System.out.println("[In an Ominous Voice] Make No Mistake...");
-            System.out.println("There is Only one David Franklin");
+            System.out.println("[In an Ominous Voice] Make No Mistake...\n");
+            System.out.println("There is Only one David Franklin.\n");
         }
     }
 
     public static void main(String[] args){
 
-        
-
         David david = new David("CS degree from a super challenging Engineering program",
             true, 9001);
-
-        
-        //all_people_in_existence.add(david);
         
         there_can_be_only_one(david);
-        /*
+
+        System.out.println("...and this is why: \n");
+        
         david.proclaimAwesomeness();
         david.allTheStuffIKnow();
         david.getExperience();
@@ -105,6 +102,6 @@ public class MeMyself{
         System.out.println(david.whatIam);
         System.out.println(david.howMuchPowerDoesHeActuallyHave());
         System.out.println(david.getAthleticProwess());
-        System.out.println(david.getEducationLevel());*/
+        System.out.println(david.getEducationLevel());
     }
 }
