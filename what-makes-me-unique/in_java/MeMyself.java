@@ -5,9 +5,13 @@
 //package private visibility --> that's right, I can research scope
 class David extends Person implements mySkills{
 
-    String education = "";
-    boolean athletic = true; //default is true, obviously...
-    int powerLevel;
+    //a message to anyone who thinks they're better than me...
+    static final String whatIam = "Bro, do you even lift?";
+
+    //no one outside this class can see this sh**
+    private String education = "";
+    private boolean athletic = true; //default is true, obviously...
+    private int powerLevel;
 
     //uh oh - slightly different visibility modifiers between the class declaration
     //and the constructor, oh man, some serious sh** is probably about to go down...
@@ -18,9 +22,6 @@ class David extends Person implements mySkills{
 
     }
 
-    //a message to anyone who thinks they're better than me...
-    static final String whatIam = "Bro, do you even lift?";
-    
     //a little method overriding action
     void proclaimAwesomeness() { System.out.println("I'm very awesome actually"); }
     void getExperience(){System.out.println("I'm a GrandMaster of Martial Arts");}
@@ -34,6 +35,14 @@ class David extends Person implements mySkills{
     }
 
     //getters + setters
+    public String howMuchPowerDoesHeActuallyHave(){
+        if(this.powerLevel > 9000){
+            return "IT'S OVER 9000!!!!!";
+        }else{
+            return "I can feel his power increasing...!!!!!";
+        }
+    }
+
 
 
 }
@@ -48,5 +57,6 @@ public class MeMyself{
         david.getExperience();
         david.mutantSuperPowers();
         System.out.println(david.whatIam);
+        System.out.println(david.howMuchPowerDoesHeActuallyHave());
     }
 }
