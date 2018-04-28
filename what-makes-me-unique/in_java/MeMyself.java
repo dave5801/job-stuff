@@ -3,6 +3,8 @@
 //And I have skills, serious, [look at me!], very serious programming skills...
 
 class David extends Person implements mySkills{
+
+    static final String whatIam = "Bro, do you even lift?";
     
     //a little method overriding action
     void proclaimAwesomeness() { System.out.println("I'm very awesome actually"); }
@@ -25,5 +27,6 @@ public class MeMyself{
         david.allTheStuffIKnow();
         david.getExperience();
         david.mutantSuperPowers();
+        System.out.println(david.whatIam);
     }
 }
