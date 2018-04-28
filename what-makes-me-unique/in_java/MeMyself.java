@@ -34,7 +34,23 @@ class David extends Person implements mySkills{
         }
     }
 
-    //getters + setters
+    //Not proper getters + setters...but rather my personal variation
+
+    public String getEducationLevel(){
+        String what_I_think_about_cs_degrees = "...mind set and experience are what makes a good engineer, not some sheet of paper.";
+
+        return "I have " +this.education + " " + what_I_think_about_cs_degrees;
+    }
+
+    public String getAthleticProwess(){
+        if(this.athletic == true){
+            return "Thanks to the gym and eating right because god forbid I achieve something through hardwork...";
+        }else{
+            return "I think anyone can be in shape if they work hard for it.";
+        }
+    }
+
+    //get power level -- in the form of someone's shocking reaction
     public String howMuchPowerDoesHeActuallyHave(){
         if(this.powerLevel > 9000){
             return "IT'S OVER 9000!!!!!";
@@ -43,6 +59,8 @@ class David extends Person implements mySkills{
         }
     }
 
+    
+
 
 
 }
@@ -50,7 +68,7 @@ class David extends Person implements mySkills{
 //do all humans have a main method, somewhere inside of their conscious being?
 public class MeMyself{
     public static void main(String[] args){
-        David david = new David("CS degree from super challenging Engineering program",
+        David david = new David("CS degree from a super challenging Engineering program",
             true, 9001);
         david.proclaimAwesomeness();
         david.allTheStuffIKnow();
@@ -58,5 +76,7 @@ public class MeMyself{
         david.mutantSuperPowers();
         System.out.println(david.whatIam);
         System.out.println(david.howMuchPowerDoesHeActuallyHave());
+        System.out.println(david.getAthleticProwess());
+        System.out.println(david.getEducationLevel());
     }
 }
