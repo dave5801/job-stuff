@@ -4,6 +4,7 @@
 
 class David extends Person implements mySkills{
 
+    //a message to anyone who thinks they're better than me...
     static final String whatIam = "Bro, do you even lift?";
     
     //a little method overriding action
