@@ -34,7 +34,7 @@ class David extends Person implements mySkills{
     //lets implement that interface
     public void allTheStuffIKnow(){
         for (NinjaSkills skills : NinjaSkills.values()) {
-            System.out.println(skills + " " + skills.getClass().getName());
+            System.out.println(skills);
         }
     }
 
