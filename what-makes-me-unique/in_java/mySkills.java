@@ -1,5 +1,7 @@
+//I'm a badass
 public interface mySkills{
 
+    //here's what makes me a badass
     enum NinjaSkills
     {
         JAVA, 
