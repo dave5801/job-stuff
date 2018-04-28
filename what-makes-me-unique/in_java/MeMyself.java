@@ -2,6 +2,9 @@
 //I am an extension of the greater collective of People
 //And I have skills, serious, [look at me!], very serious programming skills...
 
+//imports
+import java.util.*;
+
 //package private visibility --> that's right, I can research scope
 class David extends Person implements mySkills{
 
@@ -14,7 +17,8 @@ class David extends Person implements mySkills{
     private int powerLevel;
 
     //uh oh - slightly different visibility modifiers between the class declaration
-    //and the constructor, oh man, some serious sh** is probably about to go down...
+    //and the constructor, I bet there might be some issues if I try to instantiate 
+    //this from outside my personal class heiarchy.
     protected David(String education, boolean athletic, int powerLevel){
         this.education = education;
         this.athletic = athletic;
@@ -59,17 +63,41 @@ class David extends Person implements mySkills{
         }
     }
 
-    
-
-
-
 }
 
 //do all humans have a main method, somewhere inside of their conscious being?
 public class MeMyself{
+
+    //a data structure which will not allow duplicates
+    //see where I'm going with this?
+    static HashSet all_people_in_existence = new HashSet();
+
+    static void there_can_be_only_one(David david){
+        
+        //arbitrary for loop to add multiple elements to a hashset
+        for(int i = 0; i < 10; i++){
+            all_people_in_existence.add(david);
+        }
+
+        //hash sets have no tolerance for duplicates
+        if(all_people_in_existence.size() == 1){
+            System.out.println("[In an Ominous Voice] Make No Mistake...");
+            System.out.println("There is Only one David Franklin");
+        }
+    }
+
     public static void main(String[] args){
+
+        
+
         David david = new David("CS degree from a super challenging Engineering program",
             true, 9001);
+
+        
+        //all_people_in_existence.add(david);
+        
+        there_can_be_only_one(david);
+        /*
         david.proclaimAwesomeness();
         david.allTheStuffIKnow();
         david.getExperience();
@@ -77,6 +105,6 @@ public class MeMyself{
         System.out.println(david.whatIam);
         System.out.println(david.howMuchPowerDoesHeActuallyHave());
         System.out.println(david.getAthleticProwess());
-        System.out.println(david.getEducationLevel());
+        System.out.println(david.getEducationLevel());*/
     }
 }
