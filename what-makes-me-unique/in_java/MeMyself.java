@@ -106,8 +106,8 @@ public class MeMyself{
         david.proclaimAwesomeness();
 
         System.out.println("What power level does this guy have...???? " +david.howMuchPowerDoesHeActuallyHave());
-        System.out.println(david.getAthleticProwess());
-        System.out.println(david.getEducationLevel());
+        System.out.println("I'm totally in shape too... " +david.getAthleticProwess());
+        System.out.println("And also " +david.getEducationLevel());
 
         System.out.println(david.whatIam);
       
