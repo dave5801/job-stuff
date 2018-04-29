@@ -3,12 +3,12 @@ public interface mySkills{
 
     //here's what makes me a badass
     public enum NinjaSkills {
-    JAVA ("Java"),
-    PYTHON ("Python, Django"),
-    JS ("Javascript, React, Node"),
-    AWS ("Amazon Web Services -- S3, EC2, automation scripts, and VPC"),
-    HTML ("HTML5"),
-    CSS ("CSS"),
+    JAVA ("Java,"),
+    PYTHON ("Python, Django,"),
+    JS ("Javascript, React, Node,"),
+    AWS ("Amazon Web Services -- S3, EC2, automation scripts, and VPC,"),
+    HTML ("HTML5,"),
+    CSS ("CSS,"),
     SERIOUS_SKILLS ("Nunchuck Skills");
 
     //converts my enum constants to strings

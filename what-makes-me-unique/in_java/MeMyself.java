@@ -33,9 +33,13 @@ class David extends Person implements mySkills{
 
     //lets implement that interface
     public void allTheStuffIKnow(){
+        StringBuilder sb=new StringBuilder("");  
+
         for (NinjaSkills skills : NinjaSkills.values()) {
-            System.out.println(skills);
+            //System.out.println(skills.toString());
+            sb.append(skills.toString() + " ");
         }
+        System.out.println(sb);
     }
 
     //Not proper getters + setters...but rather my personal variation
