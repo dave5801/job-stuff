@@ -9,7 +9,7 @@ import java.util.*;
 class David extends Person implements mySkills{
 
     //a message to anyone who thinks they're better than me...
-    static final String whatIam = "\nBecause Bro... do you even lift?";
+    static final String whatIam = "\nI'm an Army Veteran who served in Iraq.\n";
 
     //no one outside this class can see this sh**
     private String education = "";
