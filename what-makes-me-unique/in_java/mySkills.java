@@ -4,13 +4,16 @@ public interface mySkills{
     //here's what makes me a badass
     public enum NinjaSkills {
     JAVA ("Java"),
-    PYTHON ("Python"),
-    JS ("Javascript -- meaning React and Node too"),
+    PYTHON ("Python, Django"),
+    JS ("Javascript, React, Node"),
     AWS ("Amazon Web Services -- S3, EC2, automation scripts, and VPC"),
     HTML ("HTML5"),
-    CSS ("CSS - I write it manually rather than relying on Bootstrap"),
+    CSS ("CSS"),
     SERIOUS_SKILLS ("Nunchuck Skills");
 
+    //converts my enum constants to strings
+    //citation: https://stackoverflow.com/questions/6667243/using-enum-values-as-string-literals
+    //I can google things
     private final String name;       
 
     private NinjaSkills(String s) {
@@ -18,7 +21,6 @@ public interface mySkills{
     }
 
     public boolean equalsName(String otherName) {
-        // (otherName == null) check is not needed because name.equals(null) returns false 
         return name.equals(otherName);
     }
 
