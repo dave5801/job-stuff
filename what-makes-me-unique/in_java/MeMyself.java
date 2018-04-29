@@ -104,10 +104,13 @@ public class MeMyself{
 
         david.allTheStuffIKnow();
         david.proclaimAwesomeness();
+
+        System.out.println("What power level does this guy have...???? " +david.howMuchPowerDoesHeActuallyHave());
+        System.out.println(david.getAthleticProwess());
+        System.out.println(david.getEducationLevel());
+
         System.out.println(david.whatIam);
       
-        //System.out.println(david.howMuchPowerDoesHeActuallyHave());
-        //System.out.println(david.getAthleticProwess());
-        //System.out.println(david.getEducationLevel());
+        
     }
 }
