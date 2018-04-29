@@ -9,7 +9,7 @@ import java.util.*;
 class David extends Person implements mySkills{
 
     //a message to anyone who thinks they're better than me...
-    static final String whatIam = "Bro, do you even lift?";
+    static final String whatIam = "\nBecause Bro... do you even lift?";
 
     //no one outside this class can see this sh**
     private String education = "";
@@ -27,19 +27,19 @@ class David extends Person implements mySkills{
     }
 
     //a little method overriding action
-    void proclaimAwesomeness() { System.out.println("I'm very awesome actually"); }
-    void getExperience(){System.out.println("I'm a GrandMaster of Martial Arts");}
-    void mutantSuperPowers(){System.out.println("Basically, I'm Wolverine.");}
+    void proclaimAwesomeness() { System.out.println("\nI'm very awesome actually."); }
+    void getExperience(){System.out.println("I'm a GrandMaster of Martial Arts...From the Future.\n");}
+    void mutantSuperPowers(){System.out.println("And also -- I'm Wolverine.\n");}
 
     //lets implement that interface
     public void allTheStuffIKnow(){
-        StringBuilder sb=new StringBuilder("");  
-
+        //list out tech skills in one string
+        StringBuilder tech_skills = new StringBuilder("TECHNOLOGY SKILLS: ");  
+        //look enum values converted to Strings
         for (NinjaSkills skills : NinjaSkills.values()) {
-            //System.out.println(skills.toString());
-            sb.append(skills.toString() + " ");
+            tech_skills.append(skills.toString() + " ");
         }
-        System.out.println(sb);
+        System.out.println(tech_skills);
     }
 
     //Not proper getters + setters...but rather my personal variation
@@ -99,13 +99,15 @@ public class MeMyself{
 
         System.out.println("...and this is why: \n");
         
-        david.proclaimAwesomeness();
-        david.allTheStuffIKnow();
         david.getExperience();
         david.mutantSuperPowers();
+
+        david.allTheStuffIKnow();
+        david.proclaimAwesomeness();
         System.out.println(david.whatIam);
-        System.out.println(david.howMuchPowerDoesHeActuallyHave());
-        System.out.println(david.getAthleticProwess());
-        System.out.println(david.getEducationLevel());
+      
+        //System.out.println(david.howMuchPowerDoesHeActuallyHave());
+        //System.out.println(david.getAthleticProwess());
+        //System.out.println(david.getEducationLevel());
     }
 }
