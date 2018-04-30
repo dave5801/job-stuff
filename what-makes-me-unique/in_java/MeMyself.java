@@ -9,27 +9,36 @@ import java.util.*;
 class David extends Person implements mySkills{
 
     //a message to anyone who thinks they're better than me...
-    static final String whatIam = "\nI'm an Army Veteran who served in Iraq.\n";
+    static final String whatIam = "I'm an Army Veteran who served in Iraq.";
 
     //no one outside this class can see this sh**
     private String education = "";
-    private boolean athletic = true; //default is true, obviously...
+    private boolean isAthletic = true; //default is true, obviously...
     private int powerLevel;
 
     //uh oh - slightly different visibility modifiers between the class declaration
     //and the constructor, I bet there might be some issues if I try to instantiate 
     //this from outside my personal class heiarchy.
-    protected David(String education, boolean athletic, int powerLevel){
+    protected David(String education, boolean isAthletic, int powerLevel){
         this.education = education;
-        this.athletic = athletic;
+        this.isAthletic = isAthletic;
         this.powerLevel = powerLevel;
 
     }
 
     //a little method overriding action
-    void proclaimAwesomeness() { System.out.println("\nI'm very awesome actually."); }
-    void getExperience(){System.out.println("I'm a GrandMaster of Martial Arts...From the Future.\n");}
-    void mutantSuperPowers(){System.out.println("And also -- I'm Wolverine.\n");}
+    void proclaimAwesomeness() { 
+        System.out.println();
+        System.out.println("I'm very awesome actually."); 
+    }
+    void getExperience(){
+        System.out.println("I'm a GrandMaster of Martial Arts...From the Future.");
+        System.out.println();
+    }
+    void mutantSuperPowers(){
+        System.out.println("And also -- I'm Wolverine.");
+        System.out.println();
+    }
 
     //lets implement that interface
     public void allTheStuffIKnow(){
@@ -51,7 +60,7 @@ class David extends Person implements mySkills{
     }
 
     public String getAthleticProwess(){
-        if(this.athletic == true){
+        if(this.isAthletic){
             return "Thanks to the gym and eating right because god forbid I achieve something through hardwork...";
         }else{
             return "I think anyone can be in shape if they work hard for it.";
@@ -74,19 +83,21 @@ public class MeMyself{
 
     //a data structure which will not allow duplicates
     //see where I'm going with this?
-    static HashSet all_people_in_existence = new HashSet();
+    static HashSet<Person> allPeopleInExistence = new HashSet();
 
-    static void there_can_be_only_one(David david){
+    static void thereCanBeOnlyOne(David david){
         
         //arbitrary for loop to add multiple elements to a hashset
         for(int i = 0; i < 10; i++){
-            all_people_in_existence.add(david);
+            allPeopleInExistence.add(david);
         }
 
         //hash sets have no tolerance for duplicates
-        if(all_people_in_existence.size() == 1){
-            System.out.println("[In an Ominous Voice] Make No Mistake...\n");
-            System.out.println("There is Only one David Franklin.\n");
+        if(allPeopleInExistence.size() == 1){
+            System.out.println("[In an Ominous Voice] Make No Mistake...");
+            System.out.println();
+            System.out.println("There is Only one David Franklin.");
+            System.out.println();
         }
     }
 
@@ -95,9 +106,10 @@ public class MeMyself{
         David david = new David("CS degree from a super challenging Engineering program",
             true, 9001);
         
-        there_can_be_only_one(david);
+        thereCanBeOnlyOne(david);
 
-        System.out.println("...and this is why: \n");
+        System.out.println("...and this is why:");
+        System.out.println();
         
         david.getExperience();
         david.mutantSuperPowers();
@@ -109,7 +121,9 @@ public class MeMyself{
         System.out.println("I'm totally in shape too... " +david.getAthleticProwess());
         System.out.println("And also " +david.getEducationLevel());
 
+        System.out.println();
         System.out.println(david.whatIam);
+        System.out.println();
       
         
     }
