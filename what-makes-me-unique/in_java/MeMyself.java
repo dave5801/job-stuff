@@ -74,17 +74,17 @@ public class MeMyself{
 
     //a data structure which will not allow duplicates
     //see where I'm going with this?
-    static HashSet<Person> all_people_in_existence = new HashSet();
+    static HashSet<Person> allPeopleInExistence = new HashSet();
 
     static void thereCanBeOnlyOne(David david){
         
         //arbitrary for loop to add multiple elements to a hashset
         for(int i = 0; i < 10; i++){
-            all_people_in_existence.add(david);
+            allPeopleInExistence.add(david);
         }
 
         //hash sets have no tolerance for duplicates
-        if(all_people_in_existence.size() == 1){
+        if(allPeopleInExistence.size() == 1){
             System.out.println("[In an Ominous Voice] Make No Mistake...\n");
             System.out.println("There is Only one David Franklin.\n");
         }
