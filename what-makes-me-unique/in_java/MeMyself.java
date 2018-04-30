@@ -74,7 +74,7 @@ public class MeMyself{
 
     //a data structure which will not allow duplicates
     //see where I'm going with this?
-    static HashSet all_people_in_existence = new HashSet();
+    static HashSet<Person> all_people_in_existence = new HashSet();
 
     static void there_can_be_only_one(David david){
         
