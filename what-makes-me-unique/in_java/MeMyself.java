@@ -76,7 +76,7 @@ public class MeMyself{
     //see where I'm going with this?
     static HashSet<Person> all_people_in_existence = new HashSet();
 
-    static void there_can_be_only_one(David david){
+    static void thereCanBeOnlyOne(David david){
         
         //arbitrary for loop to add multiple elements to a hashset
         for(int i = 0; i < 10; i++){
@@ -95,7 +95,7 @@ public class MeMyself{
         David david = new David("CS degree from a super challenging Engineering program",
             true, 9001);
         
-        there_can_be_only_one(david);
+        thereCanBeOnlyOne(david);
 
         System.out.println("...and this is why: \n");
         
