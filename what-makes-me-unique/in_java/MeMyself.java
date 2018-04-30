@@ -13,15 +13,15 @@ class David extends Person implements mySkills{
 
     //no one outside this class can see this sh**
     private String education = "";
-    private boolean athletic = true; //default is true, obviously...
+    private boolean isAthletic = true; //default is true, obviously...
     private int powerLevel;
 
     //uh oh - slightly different visibility modifiers between the class declaration
     //and the constructor, I bet there might be some issues if I try to instantiate 
     //this from outside my personal class heiarchy.
-    protected David(String education, boolean athletic, int powerLevel){
+    protected David(String education, boolean isAthletic, int powerLevel){
         this.education = education;
-        this.athletic = athletic;
+        this.isAthletic = isAthletic;
         this.powerLevel = powerLevel;
 
     }
@@ -51,7 +51,7 @@ class David extends Person implements mySkills{
     }
 
     public String getAthleticProwess(){
-        if(this.athletic == true){
+        if(this.isAthletic){
             return "Thanks to the gym and eating right because god forbid I achieve something through hardwork...";
         }else{
             return "I think anyone can be in shape if they work hard for it.";
