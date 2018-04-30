@@ -9,7 +9,7 @@ import java.util.*;
 class David extends Person implements mySkills{
 
     //a message to anyone who thinks they're better than me...
-    static final String whatIam = "\nI'm an Army Veteran who served in Iraq.\n";
+    static final String whatIam = "I'm an Army Veteran who served in Iraq.";
 
     //no one outside this class can see this sh**
     private String education = "";
@@ -27,9 +27,18 @@ class David extends Person implements mySkills{
     }
 
     //a little method overriding action
-    void proclaimAwesomeness() { System.out.println("\nI'm very awesome actually."); }
-    void getExperience(){System.out.println("I'm a GrandMaster of Martial Arts...From the Future.\n");}
-    void mutantSuperPowers(){System.out.println("And also -- I'm Wolverine.\n");}
+    void proclaimAwesomeness() { 
+        System.out.println();
+        System.out.println("I'm very awesome actually."); 
+    }
+    void getExperience(){
+        System.out.println("I'm a GrandMaster of Martial Arts...From the Future.");
+        System.out.println();
+    }
+    void mutantSuperPowers(){
+        System.out.println("And also -- I'm Wolverine.");
+        System.out.println();
+    }
 
     //lets implement that interface
     public void allTheStuffIKnow(){
@@ -85,8 +94,10 @@ public class MeMyself{
 
         //hash sets have no tolerance for duplicates
         if(allPeopleInExistence.size() == 1){
-            System.out.println("[In an Ominous Voice] Make No Mistake...\n");
-            System.out.println("There is Only one David Franklin.\n");
+            System.out.println("[In an Ominous Voice] Make No Mistake...");
+            System.out.println();
+            System.out.println("There is Only one David Franklin.");
+            System.out.println();
         }
     }
 
@@ -97,7 +108,8 @@ public class MeMyself{
         
         thereCanBeOnlyOne(david);
 
-        System.out.println("...and this is why: \n");
+        System.out.println("...and this is why:");
+        System.out.println();
         
         david.getExperience();
         david.mutantSuperPowers();
@@ -109,7 +121,9 @@ public class MeMyself{
         System.out.println("I'm totally in shape too... " +david.getAthleticProwess());
         System.out.println("And also " +david.getEducationLevel());
 
+        System.out.println();
         System.out.println(david.whatIam);
+        System.out.println();
       
         
     }
