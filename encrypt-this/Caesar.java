@@ -1,18 +1,39 @@
 class Caesar{
 
-    static String andYouBrutus(String andYou, int idesOfMarch){
-        String thenFallCaesar = "";
+    //look up: https://en.wikipedia.org/wiki/Caesar_cipher
 
-        System.out.println((int)andYou.charAt(0));
-       // int x = Math.abs((int)str.charAt(i);
-        return "";
+    //takes in plaintext and a rotation
+    static String andYouBrutus(String andYou, int idesOfMarch){
+        StringBuilder thenFallCaesar=new StringBuilder("");  
+  
+        int wouldCassiuslikeASCIIvalues = 0;
+
+        //loop plaintext
+        for(int senators = 0; senators < andYou.length(); senators++){
+
+            wouldCassiuslikeASCIIvalues = (int)andYou.charAt(senators);
+
+            //check for uppercase.
+            if (Character.isUpperCase(andYou.charAt(senators))){
+                char constantAsTheNorthStar = (char)((wouldCassiuslikeASCIIvalues+idesOfMarch - 65)%26 + 65);
+                thenFallCaesar.append(constantAsTheNorthStar);
+            //check lowercase.
+            }else{
+                char constantAsTheNorthStar = (char)((wouldCassiuslikeASCIIvalues+idesOfMarch - 97)%26 + 97);
+                thenFallCaesar.append(constantAsTheNorthStar);
+            }
+        }
+
+        return thenFallCaesar.toString();
     }
 
     public static void main(String[] args){
        
 
-        String toEncrypt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String toEncrypt = "Try to keep up with the Historical References";
         int rotate = 23;
-        andYouBrutus(toEncrypt, rotate);
+        String encrypted = andYouBrutus(toEncrypt, rotate);
+        System.out.println(encrypted);
+        System.out.println("Historically, Julius Caesar was a pioneer in the field of infosec.");
     }
 }
