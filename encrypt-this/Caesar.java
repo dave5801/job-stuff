@@ -1,18 +1,19 @@
 class Caesar{
 
     static String andYouBrutus(String andYou, int idesOfMarch){
-        String thenFallCaesar = "";
+        StringBuilder thenFallCaesar=new StringBuilder("");  
+  
 
-        int wouldCassiuslikeASCIIvalues = (int)andYou.charAt(0);
-        int e = (wouldCassiuslikeASCIIvalues+idesOfMarch - 65)%26 + 65;
-        System.out.println((char)e);
+        for(int senators = 0; senators < andYou.length(); senators++){
+            int wouldCassiuslikeASCIIvalues = (int)andYou.charAt(senators);
+            char constantAsTheNorthStar = (char)((wouldCassiuslikeASCIIvalues+idesOfMarch - 65)%26 + 65);
+            thenFallCaesar.append(constantAsTheNorthStar);
 
-        //char ch = (char)(((int)text.charAt(i) + s - 65) % 26 + 65);
+        }
 
-        //int constantAsTheNorthStar = Math.abs(idesOfMarch -wouldCassiuslikeASCIIvalues);
-       // System.out.println(constantAsTheNorthStar);
-        //System.out.println((int)'X' - 42);
-        return thenFallCaesar;
+
+
+        return thenFallCaesar.toString();
     }
 
     public static void main(String[] args){
@@ -20,6 +21,7 @@ class Caesar{
 
         String toEncrypt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         int rotate = 23;
-        andYouBrutus(toEncrypt, rotate);
+        String encrypted = andYouBrutus(toEncrypt, rotate);
+        System.out.println(encrypted);
     }
 }
