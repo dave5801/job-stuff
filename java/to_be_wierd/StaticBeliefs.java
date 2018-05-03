@@ -15,6 +15,16 @@ class DynamicRebel{
     }
 }
 
+class TheFanatic{
+    final static String theEnd = "the System must be destroyed, and its purveyors with it";
+
+    String newProphecy = "";
+
+    //adopting new principles as excuse for atrocity
+    private TheFanatic(String newProphecy){
+        this.newProphecy = newProphecy
+    }
+}
 
 class StaticBeliefs{
 
@@ -27,7 +37,11 @@ class StaticBeliefs{
         StaticBeliefs oldBeliefSystem = new StaticBeliefs();
         System.out.println(oldBeliefSystem.dogma);
 
+        //does the heretic truly exist outside the heirarchy...
         DynamicRebel heretic = new DynamicRebel("question the system", "do not accept old prejudices");
+        //...if I can instantiate its protected class from beyond?
         System.out.println(heretic.beliefs);
+
+        System.out.println();
     }
 }
