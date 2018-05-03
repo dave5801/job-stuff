@@ -22,5 +22,12 @@ class StaticBeliefs{
 
     public static void main(String args[]){
         System.out.println("I am unchanging in my beliefs");
+
+        //declare old as the new
+        StaticBeliefs oldBeliefSystem = new StaticBeliefs();
+        System.out.println(oldBeliefSystem.dogma);
+
+        DynamicRebel heretic = new DynamicRebel("question the system", "do not accept old prejudices");
+        System.out.println(heretic.beliefs);
     }
 }
