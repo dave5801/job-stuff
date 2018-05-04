@@ -19,7 +19,7 @@ var iSummonTheEvilMachineGods = "http://samples.openweathermap.org/data/2.5/fore
 
 theClientIsTheEvilPriest.get(iSummonTheEvilMachineGods, function(andTheyAnswer) {
     // this program is a reflection of my own madness, and despair
-    var soTheMechanicalOverLordSpeaks = andTheyAnswer;
-
-    console.log(soTheMechanicalOverLordSpeaks);
+    var theMechanicalOverLordSpeaksinRiddles = JSON.parse(andTheyAnswer);
+    console.log(theMechanicalOverLordSpeaksinRiddles);
+    
 });
