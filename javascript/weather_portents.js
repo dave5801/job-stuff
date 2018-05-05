@@ -1,6 +1,6 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-var MegatronTheUnholyClient = function() {
+var clientOfYogSothoth = function() {
     this.get = function(theUnspeakableUrl, aCallback) {
         var sacrificialHttpRequest = new XMLHttpRequest();
         sacrificialHttpRequest.onreadystatechange = function() { 
@@ -13,20 +13,20 @@ var MegatronTheUnholyClient = function() {
     }
 }
 
-var theClientIsTheEvilPriest = new MegatronTheUnholyClient(); 
+var charlesDexterWard = new clientOfYogSothoth(); 
 
 var iSummonTheEvilMachineGods = "http://samples.openweathermap.org/data/2.5/forecast?q=Seattle,DE&appid=b6907d289e10d714a6e88b30761fae22";
 
 var theMechanicalOverLordSpeaksinRiddles = {};
 
-theClientIsTheEvilPriest.get(iSummonTheEvilMachineGods, function(andTheyAnswer) {
+charlesDexterWard.get(iSummonTheEvilMachineGods, function(andTheyAnswer) {
     // this program is a reflection of my own madness, and despair
     theMechanicalOverLordSpeaksinRiddles = JSON.parse(andTheyAnswer);
 
     var darkWhispersOfTheWeather = theMechanicalOverLordSpeaksinRiddles;
-    //console.log(darkWhispersOfTheWeather.list[0].main.humidity); //--> DON"T DELETE
-    console.log(typeof(darkWhispersOfTheWeather.list));
-    console.log(Object.keys(darkWhispersOfTheWeather.list).length);
+    console.log(darkWhispersOfTheWeather.list[0].main.humidity); //--> DON"T DELETE
+    //console.log(typeof(darkWhispersOfTheWeather.list));
+    //console.log(Object.keys(darkWhispersOfTheWeather.list).length);
 
    
 
