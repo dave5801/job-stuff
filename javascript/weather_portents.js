@@ -55,26 +55,22 @@ function daysAreNumbered(justAnAverageDay){
         return dayOfTheDead[justAnAverageDay]
 }
 
-function GetDates(startDate) {
-    var aryDates = [];
+function seeTheFuture(changeInTimeDimension) {
+    var fragmentsOfTime = [];
 
-    for (var i = 0; i <= 5; i++) {
-        var currentDate = new Date();
-        currentDate.setDate(startDate.getDate() + i);
-        aryDates.push(daysAreNumbered(currentDate.getDay()));
+    for (var timeTraveled = 0; timeTraveled <= 5; timeTraveled++) {
+        var aFrameOfReference = new Date();
+        aFrameOfReference.setDate(changeInTimeDimension.getDate() + timeTraveled);
+        fragmentsOfTime.push(daysAreNumbered(aFrameOfReference.getDay()));
     }
 
-    return aryDates;
+    return fragmentsOfTime;
 }
 
 //mysteriousWeatherSummons();
-var tmp = GetDates(new Date());
+var tmp = seeTheFuture(new Date());
 console.log(tmp);
 
-//var my_object = {0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four'};
-
-//my_object.length = 5;
-//console.log(Array.prototype.slice.call(my_object, 2));
 
 /*
 I need 
