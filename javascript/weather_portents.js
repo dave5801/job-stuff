@@ -41,33 +41,34 @@ function mysteriousWeatherSummons(){
 
 }
 
-function DayAsString(dayIndex) {
-    var weekdays = new Array(7);
-    weekdays[0] = "Sunday";
-    weekdays[1] = "Monday";
-    weekdays[2] = "Tuesday";
-    weekdays[3] = "Wednesday";
-    weekdays[4] = "Thursday";
-    weekdays[5] = "Friday";
-    weekdays[6] = "Saturday";
+function daysAreNumbered(justAnAverageDay){
+    dayOfTheDead = {
+        0: "Sunday",
+        1:"Monday", 
+        2: "Tuesday", 
+        3: "Wednesday", 
+        4: "Thursday", 
+        5: "Friday", 
+        6: "Saturday"
+        }
 
-    return weekdays[dayIndex];
+        return dayOfTheDead[justAnAverageDay]
 }
 
-function GetDates(startDate, daysToAdd) {
+function GetDates(startDate) {
     var aryDates = [];
 
-    for (var i = 0; i <= daysToAdd; i++) {
+    for (var i = 0; i <= 5; i++) {
         var currentDate = new Date();
         currentDate.setDate(startDate.getDate() + i);
-        aryDates.push(DayAsString(currentDate.getDay()));
+        aryDates.push(daysAreNumbered(currentDate.getDay()));
     }
 
     return aryDates;
 }
 
 //mysteriousWeatherSummons();
-var tmp = GetDates(new Date(), 5);
+var tmp = GetDates(new Date());
 console.log(tmp);
 
 //var my_object = {0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four'};
