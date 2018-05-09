@@ -41,9 +41,39 @@ function mysteriousWeatherSummons(){
 
 }
 
+function DayAsString(dayIndex) {
+    var weekdays = new Array(7);
+    weekdays[0] = "Sunday";
+    weekdays[1] = "Monday";
+    weekdays[2] = "Tuesday";
+    weekdays[3] = "Wednesday";
+    weekdays[4] = "Thursday";
+    weekdays[5] = "Friday";
+    weekdays[6] = "Saturday";
 
-mysteriousWeatherSummons();
+    return weekdays[dayIndex];
+}
 
+function GetDates(startDate, daysToAdd) {
+    var aryDates = [];
+
+    for (var i = 0; i <= daysToAdd; i++) {
+        var currentDate = new Date();
+        currentDate.setDate(startDate.getDate() + i);
+        aryDates.push(DayAsString(currentDate.getDay()));
+    }
+
+    return aryDates;
+}
+
+//mysteriousWeatherSummons();
+var tmp = GetDates(new Date(), 5);
+console.log(tmp);
+
+//var my_object = {0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four'};
+
+//my_object.length = 5;
+//console.log(Array.prototype.slice.call(my_object, 2));
 
 /*
 I need 
