@@ -1,3 +1,29 @@
+function daysAreNumbered(justAnAverageDay){
+    dayOfTheDead = {
+        0: "Sunday",
+        1:"Monday", 
+        2: "Tuesday", 
+        3: "Wednesday", 
+        4: "Thursday", 
+        5: "Friday", 
+        6: "Saturday"
+        }
+
+        return dayOfTheDead[justAnAverageDay]
+}
+
+function seeTheFuture(changeInTimeDimension) {
+    var fragmentsOfTime = [];
+
+    for (var timeTraveled = 0; timeTraveled <= 5; timeTraveled++) {
+        var aFrameOfReference = new Date();
+        aFrameOfReference.setDate(changeInTimeDimension.getDate() + timeTraveled);
+        fragmentsOfTime.push(daysAreNumbered(aFrameOfReference.getDay()));
+    }
+
+    return fragmentsOfTime;
+}
+
 function mysteriousWeatherSummons(){
     var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
@@ -29,47 +55,26 @@ function mysteriousWeatherSummons(){
        // console.log(Object.keys(darkWhispersOfTheWeather.list).length);
         var daysOfTheDarkWeather = Object.keys(darkWhispersOfTheWeather.list).length;
 
+        var notWhereButWhen = seeTheFuture(new Date());
+       // console.log(notWhereButWhen[0]);
+
+        
         for(var unholy_index = 0; unholy_index < daysOfTheDarkWeather; unholy_index+=7){
+            console.log(notWhereButWhen[unholy_index/7]);
             console.log("high: " +darkWhispersOfTheWeather.list[unholy_index].main.temp);
             console.log("low: " +darkWhispersOfTheWeather.list[unholy_index].main.temp_min);
             console.log("humidity: " +darkWhispersOfTheWeather.list[unholy_index].main.humidity);
         }
 
-       
-
     });
 
 }
 
-function daysAreNumbered(justAnAverageDay){
-    dayOfTheDead = {
-        0: "Sunday",
-        1:"Monday", 
-        2: "Tuesday", 
-        3: "Wednesday", 
-        4: "Thursday", 
-        5: "Friday", 
-        6: "Saturday"
-        }
 
-        return dayOfTheDead[justAnAverageDay]
-}
 
-function seeTheFuture(changeInTimeDimension) {
-    var fragmentsOfTime = [];
-
-    for (var timeTraveled = 0; timeTraveled <= 5; timeTraveled++) {
-        var aFrameOfReference = new Date();
-        aFrameOfReference.setDate(changeInTimeDimension.getDate() + timeTraveled);
-        fragmentsOfTime.push(daysAreNumbered(aFrameOfReference.getDay()));
-    }
-
-    return fragmentsOfTime;
-}
-
-//mysteriousWeatherSummons();
-var tmp = seeTheFuture(new Date());
-console.log(tmp);
+mysteriousWeatherSummons();
+//var tmp = seeTheFuture(new Date());
+//console.log(tmp);
 
 
 /*
