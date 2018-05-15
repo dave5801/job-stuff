@@ -8,14 +8,13 @@ function daysAreNumbered(justAnAverageDay){
         5: "Friday", 
         6: "Saturday"
         }
-
         return dayOfTheDead[justAnAverageDay]
 }
 
 function seeTheFuture(changeInTimeDimension) {
     var fragmentsOfTime = [];
 
-    for (var timeTraveled = 0; timeTraveled <= 5; timeTraveled++) {
+    for (var timeTraveled = 0; timeTraveled <= 4; timeTraveled++) {
         var aFrameOfReference = new Date();
         aFrameOfReference.setDate(changeInTimeDimension.getDate() + timeTraveled);
         fragmentsOfTime.push(daysAreNumbered(aFrameOfReference.getDay()));
@@ -50,21 +49,31 @@ function mysteriousWeatherSummons(){
         theMechanicalOverLordSpeaksinRiddles = JSON.parse(andTheyAnswer);
 
         var darkWhispersOfTheWeather = theMechanicalOverLordSpeaksinRiddles;
-        
-        //console.log(darkWhispersOfTheWeather.list[0].main.humidity); //--> DON"T DELETE
-       // console.log(Object.keys(darkWhispersOfTheWeather.list).length);
+
         var daysOfTheDarkWeather = Object.keys(darkWhispersOfTheWeather.list).length;
 
         var notWhereButWhen = seeTheFuture(new Date());
-       // console.log(notWhereButWhen[0]);
 
+        var visionsThatAppearinMyDreams = {}
         
         for(var unholy_index = 0; unholy_index < daysOfTheDarkWeather; unholy_index+=7){
-            console.log(notWhereButWhen[unholy_index/7]);
-            console.log("high: " +darkWhispersOfTheWeather.list[unholy_index].main.temp);
-            console.log("low: " +darkWhispersOfTheWeather.list[unholy_index].main.temp_min);
-            console.log("humidity: " +darkWhispersOfTheWeather.list[unholy_index].main.humidity);
+
+            aMereMomentaryExistence = []//a temporary variable is only a momentary life
+            aMereMomentaryExistence.push("high: " +darkWhispersOfTheWeather.list[unholy_index].main.temp.toString());
+            aMereMomentaryExistence.push("low: " +darkWhispersOfTheWeather.list[unholy_index].main.temp_min.toString());
+            aMereMomentaryExistence.push("humidity: " +darkWhispersOfTheWeather.list[unholy_index].main.humidity.toString());
+
+
+            if(notWhereButWhen[unholy_index/7]){
+                visionsThatAppearinMyDreams[notWhereButWhen[unholy_index/7]] = aMereMomentaryExistence;
+            }
+            
+
         }
+
+        console.log(typeof(visionsThatAppearinMyDreams)===undefined);
+       // console.log(Object.keys(visionsThatAppearinMyDreams));
+        return visionsThatAppearinMyDreams;
 
     });
 
@@ -72,9 +81,9 @@ function mysteriousWeatherSummons(){
 
 
 
-mysteriousWeatherSummons();
-//var tmp = seeTheFuture(new Date());
-//console.log(tmp);
+var sacrificePigdeonInReturnForWeatherForecast = mysteriousWeatherSummons();
+
+console.log("TEST " +sacrificePigdeonInReturnForWeatherForecast);
 
 
 /*
